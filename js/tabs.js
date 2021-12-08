@@ -9,6 +9,7 @@ function Tab(parentContainer) {
     this.innerContainer = parentContainer.querySelector(".core_score_pkg_tabs_internal_wrapper");
     this.tabs = parentContainer.querySelectorAll(".core_score_pkg_tab");
     this.progressBar = parentContainer.querySelector(".core_score_pkg_tabs_progress_bar");
+    this.progressBarIndicator = parentContainer.querySelector(".core_score_pkg_tabs_progress_bar_indicator");
     this.prevControl = parentContainer.querySelector(".core_score_prev_control");
     this.nextControl = parentContainer.querySelector(".core_score_next_control");
     this.size = parentContainer.clientWidth;
@@ -29,6 +30,10 @@ function Tab(parentContainer) {
 
         // animate progress bar
         self.progressBar.style.backgroundSize = ""+(self.startIndex/(self.tabs.length - 1)) * 100+"% 100%";
+
+        // progressbar indicator
+        self.progressBarIndicator.style.left = ""+(self.startIndex/(self.tabs.length - 1)) * 100 +"%";
+        self.progressBarIndicator.innerText = ""+(self.startIndex + 1 ) +"/"+ (self.tabs.length) +"";
     }
 
     this.prevControl.addEventListener("click", function (){

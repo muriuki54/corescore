@@ -118,6 +118,22 @@ button.core_score_pkg_success_btn {
     -ms-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
 }
+
+.core_score_pkg_tabs_progress_bar_indicator {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: #fff;
+    width: 30px;
+    height: 50px;
+    margin: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    z-index: 3;
+}
 /* END PROGRESS BAR */
 
 /* TABS     */
